@@ -60,33 +60,10 @@ func TestMatchAllOrigin(t *testing.T) {
 
 	assertHeaders(t, res.Header(), map[string]string{
 		"Vary": "Origin",
-		"Access-Control-Allow-Origin":      "*",
-		"Access-Control-Allow-Methods":     "",
-		"Access-Control-Allow-Headers":     "",
-		"Access-Control-Allow-Credentials": "",
-		"Access-Control-Max-Age":           "",
-		"Access-Control-Expose-Headers":    "",
-	})
-}
-
-func TestMatchAllOriginWithCredentials(t *testing.T) {
-	s := New(Options{
-		AllowedOrigins:   []string{"*"},
-		AllowCredentials: true,
-	})
-
-	res := httptest.NewRecorder()
-	req, _ := http.NewRequest("GET", "http://example.com/foo", nil)
-	req.Header.Add("Origin", "http://foobar.com")
-
-	s.Handler(testHandler).ServeHTTP(res, req)
-
-	assertHeaders(t, res.Header(), map[string]string{
-		"Vary": "Origin",
 		"Access-Control-Allow-Origin":      "http://foobar.com",
 		"Access-Control-Allow-Methods":     "",
 		"Access-Control-Allow-Headers":     "",
-		"Access-Control-Allow-Credentials": "true",
+		"Access-Control-Allow-Credentials": "",
 		"Access-Control-Max-Age":           "",
 		"Access-Control-Expose-Headers":    "",
 	})
@@ -428,9 +405,24 @@ func TestDebug(t *testing.T) {
 		Debug: true,
 	})
 
-	if s.Log == nil {
+	if s.logf == nil {
 		t.Error("Logger not created when debug=true")
 	}
+
+	res := httptest.NewRecorder()
+	req, _ := http.NewRequest("GET", "http://example.com/foo", nil)
+
+	s.Handler(testHandler).ServeHTTP(res, req)
+
+	assertHeaders(t, res.Header(), map[string]string{
+		"Vary": "Origin",
+		"Access-Control-Allow-Origin":      "",
+		"Access-Control-Allow-Methods":     "",
+		"Access-Control-Allow-Headers":     "",
+		"Access-Control-Allow-Credentials": "",
+		"Access-Control-Max-Age":           "",
+		"Access-Control-Expose-Headers":    "",
+	})
 }
 
 func TestOptionsPassthrough(t *testing.T) {
