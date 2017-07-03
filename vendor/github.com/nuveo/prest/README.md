@@ -24,11 +24,12 @@ docker run -e PREST_HTTP_PORT=3000 \
 	-e PREST_PG_HOST=127.0.0.1 \
 	-e PREST_PG_USER=postgres \
 	-e PREST_PG_PASS=pass \
-	nuveo/prest:0.1
+	nuveo/prest:0.2
 ```
 
 ### Tags
 
+- 0.2 (stable)
 - 0.1 (stable)
 - lastest (developer)
 
@@ -279,6 +280,28 @@ Examples:
 
 ### Multiple Orders
     GET /DATABASE/SCHEMA/TABLE/?_order=fieldname01,-fieldname02,fieldname03
+
+
+## GROUP BY
+
+We support this Group Functions:
+
+| name | Use in request |
+| ------- | ------------- |
+| SUM | sum:field |
+| AVG | avg:field |
+| MAX | max:field |
+| MIN | min:field |
+| MEDIAN | median:field |
+| STDDEV | stddev:field |
+| VARIANCE | variance:field |
+
+### Examples:
+	GET /DATABASE/SCHEMA/TABLE/?_select=fieldname00,fieldname01&_groupby=fieldname01
+
+#### Using Group Functions
+	GET /DATABASE/SCHEMA/TABLE/?_select=fieldname00,sum:fieldname01&_groupby=fieldname01
+
 
 
 ## Executing SQL scripts

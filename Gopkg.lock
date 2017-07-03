@@ -65,7 +65,7 @@
   branch = "master"
   name = "github.com/imunizeme/config.core"
   packages = ["."]
-  revision = "8e4ed0c86541c905975f2922f7cd4eaef7d5b6a4"
+  revision = "3ce8b4a46aa25abca495911b206bd05142ff3c39"
 
 [[projects]]
   branch = "master"
@@ -119,7 +119,7 @@
   branch = "master"
   name = "github.com/nuveo/prest"
   packages = ["adapters/postgres","adapters/postgres/connection","cmd","config","config/middlewares","config/router","controllers","helpers","middlewares","statements","template"]
-  revision = "b130bb8a57d2bbe12c64e6a7de78c57ab53f781a"
+  revision = "c1320b7ec2df12a17775cf5b1de669cc2faace0f"
 
 [[projects]]
   name = "github.com/pelletier/go-buffruneio"
@@ -136,14 +136,8 @@
 [[projects]]
   name = "github.com/rs/cors"
   packages = ["."]
-  revision = "a62a804a8a009876ca59105f7899938a1349f4b3"
-  version = "v1.0"
-
-[[projects]]
-  name = "github.com/rs/xhandler"
-  packages = ["."]
-  revision = "d9d9599b6aaf6a058cb7b1f48291ded2cbd13390"
-  version = "v1.0"
+  revision = "8dd4211afb5d08dbb39a533b9bb9e4b486351df6"
+  version = "v1.1"
 
 [[projects]]
   branch = "master"
@@ -161,7 +155,7 @@
   branch = "master"
   name = "github.com/spf13/cobra"
   packages = ["."]
-  revision = "4d647c8944eb42504a714e57e97f244ed6344722"
+  revision = "8c6fa02d2225de0f9bdcb7ca912556f68d172d8c"
 
 [[projects]]
   branch = "master"
@@ -189,21 +183,15 @@
 
 [[projects]]
   branch = "master"
-  name = "golang.org/x/net"
-  packages = ["context"]
-  revision = "5f8847ae0d0e90b6a9dc8148e7ad616874625171"
-
-[[projects]]
-  branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix"]
-  revision = "c23410a886927bab8ca5e80b08af6a56faeb330d"
+  revision = "d18155cb60f6162f5e706d7f26e4e50a3d4da857"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/text"
   packages = ["internal/gen","internal/triegen","internal/ucd","transform","unicode/cldr","unicode/norm"]
-  revision = "4e9ab9ee170f2a39bd66c92b3e0a47ff47a4bc77"
+  revision = "2bf8f2a19ec09c670e931282edfe6567f6be21c9"
 
 [[projects]]
   name = "gopkg.in/mattes/migrate.v1"
