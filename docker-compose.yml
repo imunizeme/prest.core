@@ -20,7 +20,7 @@ services:
             - IMUNIZEME_PG_USER=postgres
             - IMUNIZEME_PG_DBNAME=imunizeme
             - IMUNIZEME_PG_PORT=5432
-            - IMUNIZEME_JWT_KEY=51d7fe292d4883dd6e408542
+            - IMUNIZEME_JWT_KEY=51d7fe292d4883dd6e408542denver
             - IMUNIZEME_PREST_PORT=3000
             - IMUNIZEME_PREST_HOST=0.0.0.0
             - IMUNIZEME_DEBUG=true
