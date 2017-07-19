@@ -1,0 +1,1 @@
+DELETE FROM users WHERE cpf = '45196631801';
