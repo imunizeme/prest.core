@@ -5,10 +5,10 @@ CREATE TABLE profile (
     birth_date timestamp without time zone NOT NULL,
     created_at timestamp without time zone DEFAULT now(),
     last_update timestamp without time zone DEFAULT now(),
-    id_users serial REFERENCES users (id),
+    user_id serial REFERENCES users (id),
     PRIMARY KEY (id)
 );
 
 CREATE TRIGGER update_profile
-BEFORE UPDATE ON users
+BEFORE UPDATE ON profile
 FOR EACH ROW EXECUTE PROCEDURE update_datetime();
