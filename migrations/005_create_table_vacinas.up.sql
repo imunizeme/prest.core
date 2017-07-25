@@ -10,5 +10,5 @@ CREATE TABLE vacinas (
 );
 
 CREATE TRIGGER update_vacinas
-BEFORE UPDATE ON profile
+BEFORE UPDATE ON vacinas
 FOR EACH ROW EXECUTE PROCEDURE update_datetime();
