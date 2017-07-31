@@ -65,7 +65,7 @@
   branch = "master"
   name = "github.com/imunizeme/config.core"
   packages = ["."]
-  revision = "79020fb54910defee3d074e749468e69b3f8d4c2"
+  revision = "959df137090d66f3372662462cd879fe6c4eb34b"
 
 [[projects]]
   name = "github.com/inconshreveable/mousetrap"
@@ -114,18 +114,6 @@
   name = "github.com/nuveo/log"
   packages = ["."]
   revision = "3eef99fee9cf6970feec6e8bcd70af570fb6f5e5"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/nuveo/logSys"
-  packages = ["."]
-  revision = "3eef99fee9cf6970feec6e8bcd70af570fb6f5e5"
-
-[[projects]]
-  name = "github.com/nuveo/prest"
-  packages = ["config"]
-  revision = "315ba8daa92524c001b098bf49cdf24c7298a509"
-  version = "v0.2.0"
 
 [[projects]]
   name = "github.com/pelletier/go-buffruneio"
@@ -203,7 +191,7 @@
   branch = "master"
   name = "github.com/spf13/cobra"
   packages = ["."]
-  revision = "3da102d464b7d49ad9be566635716ac947fb3f99"
+  revision = "b26b538f693051ac6518e65672de3144ce3fbedc"
 
 [[projects]]
   branch = "master"

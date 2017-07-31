@@ -6,8 +6,8 @@ import (
 	"github.com/crgimenes/goConfig"
 	// toml import for goConfig
 	_ "github.com/crgimenes/goConfig/toml"
-	log "github.com/nuveo/logSys"
-	pConf "github.com/nuveo/prest/config"
+	"github.com/nuveo/log"
+	pConf "github.com/prest/config"
 )
 
 // Config for API
