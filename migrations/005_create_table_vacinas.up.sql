@@ -5,7 +5,6 @@ CREATE TABLE vacinas (
     validity_months integer NOT NULL,
     created_at timestamp without time zone DEFAULT now(),
     last_update timestamp without time zone DEFAULT now(),
-    user_id serial REFERENCES users (id),
     PRIMARY KEY (id)
 );
 
