@@ -2,8 +2,8 @@ package main
 
 import (
 	config "github.com/imunizeme/config.core"
-	log "github.com/nuveo/logSys"
-	"github.com/nuveo/prest/cmd"
+	"github.com/nuveo/log"
+	"github.com/prest/cmd"
 )
 
 func main() {

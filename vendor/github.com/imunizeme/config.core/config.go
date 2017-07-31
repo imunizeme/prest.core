@@ -20,6 +20,7 @@ type Config struct {
 	PGDBName string `toml:"pg_dbname" cfg:"pg_dbname"`
 	PGUser   string `toml:"pg_user" cfg:"pg_user" cfgDefault:"postgres"`
 	Prest    Prest  `toml:"prest" cfg:"prest"`
+	Auth     Auth   `toml:"auth" cfg:"auth"`
 }
 
 // Prest config
@@ -28,6 +29,12 @@ type Prest struct {
 	Port       int    `toml:"port" cfg:"port" cfgDefault:"3000"`
 	Migrations string `toml:"migrations" cfg:"migrations" cfgDefault:"./migrations"`
 	Queries    string `toml:"queries" cfg:"queries" cfgDefault:"./queries"`
+}
+
+// Auth config
+type Auth struct {
+	Host string `toml:"host" cfg:"host" cfgDefault:"127.0.0.1"`
+	Port int    `toml:"port" cfg:"port" cfgDefault:"4000"`
 }
 
 // Get cconfig global var

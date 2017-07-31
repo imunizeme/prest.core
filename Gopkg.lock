@@ -65,13 +65,13 @@
   branch = "master"
   name = "github.com/imunizeme/config.core"
   packages = ["."]
-  revision = "3ce8b4a46aa25abca495911b206bd05142ff3c39"
+  revision = "79020fb54910defee3d074e749468e69b3f8d4c2"
 
 [[projects]]
-  branch = "master"
   name = "github.com/inconshreveable/mousetrap"
   packages = ["."]
   revision = "76626ae9c91c4f2a10f34cad8ce83ea42c93bb75"
+  version = "v1.0"
 
 [[projects]]
   branch = "master"
@@ -83,13 +83,13 @@
   branch = "master"
   name = "github.com/lib/pq"
   packages = [".","oid"]
-  revision = "8837942c3e09574accbc5f150e2c5e057189cace"
+  revision = "dd1fe2071026ce53f36a39112e645b4d4f5793a4"
 
 [[projects]]
   name = "github.com/magiconair/properties"
   packages = ["."]
-  revision = "f917359f079a3759162704eaa8caeec3d01d9f91"
-  version = "v1.7.2"
+  revision = "be5ece7dd465ab0765a9682137865547526d1dfb"
+  version = "v1.7.3"
 
 [[projects]]
   name = "github.com/mattn/go-colorable"
@@ -111,15 +111,21 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/nuveo/logSys"
+  name = "github.com/nuveo/log"
   packages = ["."]
-  revision = "a4f55d607f6f4174938fc85091443500d25160b3"
+  revision = "3eef99fee9cf6970feec6e8bcd70af570fb6f5e5"
 
 [[projects]]
   branch = "master"
+  name = "github.com/nuveo/logSys"
+  packages = ["."]
+  revision = "3eef99fee9cf6970feec6e8bcd70af570fb6f5e5"
+
+[[projects]]
   name = "github.com/nuveo/prest"
-  packages = ["adapters/postgres","adapters/postgres/connection","cmd","config","config/middlewares","config/router","controllers","helpers","middlewares","statements","template"]
-  revision = "c1320b7ec2df12a17775cf5b1de669cc2faace0f"
+  packages = ["config"]
+  revision = "315ba8daa92524c001b098bf49cdf24c7298a509"
+  version = "v0.2.0"
 
 [[projects]]
   name = "github.com/pelletier/go-buffruneio"
@@ -134,10 +140,52 @@
   version = "v1.0.0"
 
 [[projects]]
-  name = "github.com/rs/cors"
+  branch = "master"
+  name = "github.com/prest/adapters"
+  packages = ["postgres","postgres/connection","postgres/internal/scanner"]
+  revision = "557ae5b961e4855d1afde55f0dabcc04b53a8555"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/prest/cmd"
   packages = ["."]
-  revision = "8dd4211afb5d08dbb39a533b9bb9e4b486351df6"
-  version = "v1.1"
+  revision = "f7d18d41e07705fdfe203d99e9ba101f7b774e6c"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/prest/config"
+  packages = [".","middlewares","router"]
+  revision = "d9878e15eec3f75b1b25c88abca53bf923d2c36c"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/prest/controllers"
+  packages = ["."]
+  revision = "7da58d1f72070001bb9e38ebabb37867f94956b8"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/prest/helpers"
+  packages = ["."]
+  revision = "6515e517e8582c0d0ec2aa75ac43672413dc0701"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/prest/middlewares"
+  packages = ["."]
+  revision = "9109e728747955cfb27c3a58118154149b840e45"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/prest/statements"
+  packages = ["."]
+  revision = "cbb29dfbcb6d58105c17701f4bafab4bee9c4d34"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/prest/template"
+  packages = ["."]
+  revision = "4bb12828ef5600163ea626f7a7dd2e82b6f922f4"
 
 [[projects]]
   branch = "master"
@@ -155,7 +203,7 @@
   branch = "master"
   name = "github.com/spf13/cobra"
   packages = ["."]
-  revision = "8c6fa02d2225de0f9bdcb7ca912556f68d172d8c"
+  revision = "3da102d464b7d49ad9be566635716ac947fb3f99"
 
 [[projects]]
   branch = "master"
@@ -164,16 +212,16 @@
   revision = "0efa5202c04663c757d84f90f5219c1250baf94f"
 
 [[projects]]
-  branch = "master"
   name = "github.com/spf13/pflag"
   packages = ["."]
   revision = "e57e3eeb33f795204c1ca35f56c44f83227c6e66"
+  version = "v1.0.0"
 
 [[projects]]
   branch = "master"
   name = "github.com/spf13/viper"
   packages = ["."]
-  revision = "c1de95864d73a5465492829d7cb2dd422b19ac96"
+  revision = "25b30aa063fc18e48662b86996252eabdcf2f0c7"
 
 [[projects]]
   name = "github.com/urfave/negroni"
@@ -185,13 +233,13 @@
   branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix"]
-  revision = "d18155cb60f6162f5e706d7f26e4e50a3d4da857"
+  revision = "0f826bdd13b500be0f1d4004938ad978fcc6031e"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/text"
   packages = ["internal/gen","internal/triegen","internal/ucd","transform","unicode/cldr","unicode/norm"]
-  revision = "2bf8f2a19ec09c670e931282edfe6567f6be21c9"
+  revision = "3bd178b88a8180be2df394a1fbb81313916f0e7b"
 
 [[projects]]
   name = "gopkg.in/mattes/migrate.v1"
@@ -203,11 +251,11 @@
   branch = "v2"
   name = "gopkg.in/yaml.v2"
   packages = ["."]
-  revision = "cd8b52f8269e0feb286dfeef29f8fe4d5b397e0b"
+  revision = "25c4ec802a7d637f88d584ab26798e94ad14c13b"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "d7d45ffcb305c7c9502652bf36d714a091f51ccda1cda8de8ce4f8d83774aacf"
+  inputs-digest = "36da43dd251d1e915cab6004ca14fb41236df3be4f31a7b2dbbd5fe513331f3d"
   solver-name = "gps-cdcl"
   solver-version = 1
