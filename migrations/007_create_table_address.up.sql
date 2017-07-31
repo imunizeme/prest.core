@@ -10,8 +10,11 @@ CREATE TABLE address (
     created_at timestamp without time zone DEFAULT now(),
     last_update timestamp without time zone DEFAULT now(),
     clinicas_id serial REFERENCES clinicas (id),
+    local point,
     PRIMARY KEY (id)
 );
+
+CREATE INDEX local_index ON address USING gist(local);
 
 CREATE TRIGGER update_address
 BEFORE UPDATE ON address
