@@ -9,7 +9,6 @@ CREATE TABLE address (
     country character varying(255) NOT NULL,
     created_at timestamp without time zone DEFAULT now(),
     last_update timestamp without time zone DEFAULT now(),
-    clinicas_id serial REFERENCES clinicas (id),
     local point,
     PRIMARY KEY (id)
 );
