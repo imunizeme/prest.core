@@ -3,6 +3,7 @@ CREATE TABLE profile (
     name character varying(255) NOT NULL,
     email character varying(255) NOT NULL,
     birth_date timestamp without time zone NOT NULL,
+    sexo character varying(2) NOT NULL,
     created_at timestamp without time zone DEFAULT now(),
     last_update timestamp without time zone DEFAULT now(),
     user_id serial REFERENCES users (id),
