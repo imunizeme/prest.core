@@ -1,7 +1,7 @@
 version: "3"
 services:
     postgres:
-        image: "imunizeme/postgres"
+        image: "mdillon/postgis"
         environment:
             - POSTGRES_USER=postgres
             - POSTGRES_DB=imunizeme

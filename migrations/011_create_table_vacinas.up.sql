@@ -2,7 +2,7 @@ CREATE TABLE vacinas (
     id serial NOT NULL,
     nome_vacina character varying(255) NOT NULL,
     dose integer NOT NULL,
-    dose-anterior_id integer NOT NULL,
+    dose_anterior_id integer NOT NULL,
     periodo_dose_anterior integer,
     reforco boolean DEFAULT false NOT NULL,
     grupo_id serial REFERENCES ref_group (id),
