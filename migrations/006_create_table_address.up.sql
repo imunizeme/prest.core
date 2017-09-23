@@ -2,7 +2,7 @@ CREATE TABLE address (
     id serial NOT NULL,
     zipcode integer UNIQUE NOT NULL,
     street character varying(255) NOT NULL,
-    street_num integer NOT NULL,
+    street_num integer NOT NULL DEFAULT 0,
     complement character varying(255),
     city character varying(255) NOT NULL,
     state character varying(255) NOT NULL,
