@@ -2,6 +2,7 @@ CREATE TABLE carteirinha_vacina(
     id serial NOT NULL,
     vacinas_id serial REFERENCES vacinas (id),
     user_id serial REFERENCES users (id),
+    data_tomada timestamp without time zone DEFAULT now(), 
     created_at timestamp without time zone DEFAULT now(),
     last_update timestamp without time zone DEFAULT now(),
     PRIMARY KEY (id)
