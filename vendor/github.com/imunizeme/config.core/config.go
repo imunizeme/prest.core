@@ -67,6 +67,10 @@ func Load() (err error) {
 	}
 
 	pConf.Load()
+	cors := strings.Fields(Get.Cors)
+	if len(cors) == 0 {
+		cors = []string{"*"}
+	}
 	pConf.PrestConf.HTTPPort = Get.Prest.Port
 	pConf.PrestConf.PGHost = Get.PGHost
 	pConf.PrestConf.PGPort = Get.PGPort
@@ -74,7 +78,7 @@ func Load() (err error) {
 	pConf.PrestConf.PGUser = Get.PGUser
 	pConf.PrestConf.JWTKey = Get.JWTKey
 	pConf.PrestConf.Debug = Get.Debug
-	pConf.PrestConf.CORSAllowOrigin = strings.Fields(Get.Cors)
+	pConf.PrestConf.CORSAllowOrigin = cors
 	pConf.PrestConf.MigrationsPath = Get.Prest.Migrations
 	pConf.PrestConf.QueriesPath = Get.Prest.Queries
 	return

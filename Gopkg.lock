@@ -65,7 +65,7 @@
   branch = "master"
   name = "github.com/imunizeme/config.core"
   packages = ["."]
-  revision = "8aa855d8d1148986b25325318be9626d8a998aae"
+  revision = "38688b33ecdd5184ec589c2dbf354ad874332d8d"
 
 [[projects]]
   name = "github.com/inconshreveable/mousetrap"
