@@ -8,7 +8,4 @@ AND p.sexo = '{{.sexo}}'
 {{if isSet "birth"}}
 AND p.birth_date > '{{.birth}}' 
 {{end}}
-{{if isSet "tomada"}}
-AND cv.data_tomada = '{{.tomada}}' 
-{{end}}
 GROUP BY va.nome_vacina, p.sexo, p.birth_date, cv.data_tomada
